@@ -19,7 +19,7 @@ var LocalStrategy = require('passport-local');
 
   passport.use(new LocalStrategy(function verify(username, password, cb) {
     let usersArray = JSON.parse(fs.readFileSync(path.resolve(__dirname, "../data/users.json")));
-    let filteredArray = usersArray.filter(x => x.username = username);
+    let filteredArray = usersArray.filter(x => x.username == username);
     if (filteredArray.length > 0) {
       let usersData = filteredArray[0];
       if (usersData.password == password) {
