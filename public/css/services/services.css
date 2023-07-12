@@ -1,0 +1,29 @@
+.christmas-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/christmas_cake.jpeg");
+    background-position: 50% 50%;
+}
+
+.wedding-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/wedding_cake.jpg");
+    background-position: 50% 50%;
+}
+
+.anniversary-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/anniversary_cake.jpeg");
+    background-position: 50% 90%;
+}
+
+.birthday-img {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../../img/birthday_cake.jpg");
+    background-position: 50% 75%;
+}
+
+.img-container {
+    height: 40vh;
+    width: 100%;
+    background-size: cover;
+}

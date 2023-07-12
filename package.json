@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-main",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "bootstrap": "^5.0.2",
+    "bootstrap-icons": "^1.10.5",
+    "connect-ensure-login": "^0.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "express-session-json": "^0.0.8",
+    "http-errors": "~1.6.3",
+    "jquery": "^3.7.0",
+    "morgan": "~1.9.1",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "request": "^2.88.2",
+    "typed.js": "^2.0.12"
+  }
+}

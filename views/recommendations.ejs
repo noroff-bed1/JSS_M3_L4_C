@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="../font/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link href="../css/recommendations/navbar.css" rel="stylesheet">
+        <link href="../css/recommendations/carousel.css" rel="stylesheet">
+    </head>
+    <body class="position-relative" data-bs-spy="scroll">
+      <%- include('./partials/navbar.ejs') %>
+      <div data-spy="scroll" data-target="#navbar" data-offset="0">
+        <%- include('./partials/recommendations.ejs', {data: data}) %>
+      </div>
+      <%- include('./partials/scripts.ejs') %>
+      <script src="./js/portfolioRequest.js"></script>
+    </body>
+</html>

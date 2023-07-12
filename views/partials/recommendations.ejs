@@ -1,0 +1,39 @@
+<section id="recommendations">
+  <div class="p-5 text-center">
+      <h2>Testimony</h2>
+      <p class="mb-5">What people say about us.</p>
+        <div id="carouselExampleControls" class="container carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% data.forEach(function(recommendation, index){ %>
+            <div class="<%= index === 0 ? "carousel-item active": "carousel-item" %>">
+              <img class="rounded-circle shadow-1-strong mb-4"
+              src=<%='./img/avatar' + recommendation.avatar + '.jpg'%> alt="avatar"
+              style="width: 150px;" />
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                <h5 class="mb-3"><%=recommendation.name%></h5>
+                <p><%=recommendation.role%></p>
+                <p class="text-muted">
+                  <i class="bi bi-quote pe-2"></i>
+                  <%=recommendation.description%>
+                </p>
+                <button class="btn-danger" onclick="sendDelete('http\:\/\/localhost:3000\/recommendations', <%=JSON.stringify(recommendation.name)%>)"> DELETE</button>
+             
+              </div>
+            </div>
+          </div>
+          <% }); %>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+        data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+   

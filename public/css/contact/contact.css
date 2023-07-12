@@ -1,0 +1,18 @@
+#contact .r-icon {
+    font-size: 50px;
+    text-align: center;
+}
+#contact .r-icon a {
+    color: #000;
+    display: inline-block;
+    height: 62px;
+    width: 62px;
+    font-size: 30px;
+    border-radius: 50%;
+    border: 2px solid #d4d4d4;
+    line-height: 60px;
+    text-align: center;
+}
+#contact .r-icon a:hover {
+    color: #ee8683;
+}

@@ -1,0 +1,28 @@
+<section class="login" id="login">
+    <div class="p-5 text-center">
+        <% if (!user) { %>
+            <h1>Sign in</h1>
+            <form action="/login/password" method="post">
+                <div class="row">
+                    <label for="username">Username</label>
+                    <input id="username" name="username" type="text" autocomplete="username" required autofocus>
+                </div>
+                <div class="row">
+                    <label for="current-password">Password</label>
+                    <input id="current-password" name="password" type="password" autocomplete="current-password" required>
+                </div>
+                <div class="row">
+                    <button type="submit">Sign in</button>
+                </div>
+            </form>
+        <% } %>
+        <% if (user) { %>
+            <div class="row">
+                <p>Hey <%=user.username%>!</p>
+                <form action="/login/logout" method="post">
+                    <button class="logout" type="submit">Sign out</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</section>
