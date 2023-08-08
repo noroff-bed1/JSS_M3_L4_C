@@ -16,7 +16,7 @@ router.get('/', function(req, res, next) {
 //Post New Recommendations
 router.post('/', jsonParser, function(req, res, next) {
   const expectedAttributed = ["avatar", "name", "role", "description"]
-    object.keys(req.body).forEach(param => {
+    Object.keys(req.body).forEach(param => {
       if (!(expectedAttributed.includes(param))) {
         console.log(param);
         res.status(400).end("Wrong Attr");
