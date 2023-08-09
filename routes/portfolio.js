@@ -28,6 +28,11 @@ router.post('/', jsonParser, function(req, res, next) {
         if (!(expectedAttributed.includes(param))) {
             res.status(400).end("Wrong Atr");
         }
+        else{
+          if(req.body[param] == ''){
+            res.status(400).end(param + " must have a value");
+          }
+        }
     });
     if (req.body.url == null || req.body.name == null) {
       res.status(400).end("Url/name not provided");
