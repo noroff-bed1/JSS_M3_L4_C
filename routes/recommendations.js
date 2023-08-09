@@ -20,6 +20,10 @@ router.post('/', jsonParser, function(req, res, next) {
       if (!(expectedAttributed.includes(param))) {
         console.log(param);
         res.status(400).end("Wrong Attr");
+      }else{
+        if(req.body[param] == ''){
+          res.status(400).end(param + " must have a value");
+        }
       }
     });
     if (req.body.avatar == null || req.body.name == null) {
