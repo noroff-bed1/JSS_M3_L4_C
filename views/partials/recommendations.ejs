@@ -17,8 +17,8 @@
                   <i class="bi bi-quote pe-2"></i>
                   <%=recommendation.description%>
                 </p>
-                <button class="btn-danger" onclick="sendDelete('http\:\/\/localhost:3000\/recommendations', <%=JSON.stringify(recommendation.name)%>)"> DELETE</button>
-             
+                <button class="btn-danger" onclick="sendDelete('/recommendations', <%=JSON.stringify(recommendation.name)%>)"> DELETE</button>
+
               </div>
             </div>
           </div>
@@ -36,4 +36,3 @@
       </div>
     </div>
   </section>
-   

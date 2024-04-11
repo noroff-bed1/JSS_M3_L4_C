@@ -19,10 +19,10 @@
         <% cakes.forEach(function(cake){ %>
           <div class="hide col-lg-4 col-md-6 col-sm-12 <%=cake.category%>">
             <div class="text-center">
-              <img class="mb-3" src="http://localhost:8080/images/<%=cake.name%>" alt="<%=cake.alt%>" style="width:100%">
+              <img class="mb-3" src="/images/<%=cake.name%>" alt="<%=cake.alt%>" style="width:100%">
               <h4><%=cake.header%></h4>
               <p><%=cake.description%></p>
-             <button class="btn-danger" onclick="sendDelete('http\:\/\/localhost:3000\/portfolio', <%=JSON.stringify(cake.name)%>)"> DELETE</button>
+             <button class="btn-danger" onclick="sendDelete('/portfolio', <%=JSON.stringify(cake.name)%>)"> DELETE</button>
             </div>
           </div>
         <% });%>

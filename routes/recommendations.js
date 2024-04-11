@@ -13,6 +13,7 @@ router.get('/', function(req, res, next) {
   res.render('recommendations', { data: JSON.parse(data)
  });
 });
+
 //Post New Recommendations
 router.post('/', jsonParser, function(req, res, next) {
   const expectedAttributed = ["avatar", "name", "role", "description"]
@@ -32,7 +33,7 @@ router.post('/', jsonParser, function(req, res, next) {
     if (!([1, 2, 3].includes(req.body.avatar))) {
       res.status(400).end("Wrong avatar provided")
     }
-    
+
   let rawdata = fs.readFileSync(path.resolve(__dirname, "../data/recommendations.json"));
   let recommendationsArray = JSON.parse(rawdata);
   if(recommendationsArray.filter(x => x.name === req.body.name).length == 0) {
